@@ -15,47 +15,36 @@ libname chol xport "/home/u64141724/BIST25/P_TRIGLY.xpt";
 
 proc contents data = demo.p_demo; 
 run; 
-
 proc contents data = bp.p_bpxo; 
 run; 
-
 proc contents data = bm.p_bmx ; 
 run; 
-
 proc contents data = dib.p_diq ; 
 run; 
-
 proc contents data = chol.p_trigly ; 
 run; 
-
 
 proc sort data = demo.p_demo out = demog; 
 	by seqn; 
 run; 
-
 proc sort data = bp.p_bpxo out = bpx; 
 	by seqn; 
 run; 
-
 proc sort data = bm.p_bmx out = bmxo; 
 	by seqn; 
 run; 
-
 proc sort data = dib.p_diq out = dibg; 
 	by seqn; 
 run; 
-
 proc sort data = chol.p_trigly out = tri; 
 	by seqn; 
 run; 
-
 
 data analysis;
   merge bmxo(in=C) demog(in=A) bpx(in=B) dibg(in=D) tri(in=E);
   by seqn;
   if C;  
 run;
-
 
 data analysis; 
 	set analysis; 
@@ -127,7 +116,6 @@ proc freq data=analysis;
           DMDMARTZ marfmt.
           DMDEDUC2 edufmt.;
 run;
-
 
 proc freq data=analysis;
    tables RIAGENDR*DIQ050 / norow nocol nopercent;
