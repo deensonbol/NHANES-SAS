@@ -17,6 +17,6 @@ It merges demographic, body measure, blood pressure, diabetes, and lipid dataset
 
 ## ⚙️ How to Run
 1. Place NHANES `.xpt` files into the `/data/` folder.  
-2. Open `.sas` in SAS 9.4.  
+2. Open `NHANES Project.sas` in SAS 9.4.  
 3. Run the program to generate tables and figures in `/outputs/`.
 
